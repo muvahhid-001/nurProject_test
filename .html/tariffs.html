@@ -1,46 +1,59 @@
+<!--
 
+Автор: zeet-comp.ru
+
+Технологии для dev:
+1) npm
+2) webpack
+3) scss
+4) bundle 
+
+-->
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>NUR - Интернет Провайдер.</title>
-    <link href="/style.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet"></head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>NUR - Тарифы.</title>
+    <link href="../style.css" rel="stylesheet">
+  </head>
   <body>
     <div id="overlay" class="overlay"></div>
     <nav id="sideMenu" class="side-menu">
-      <button class="side-menu__button"><img class="side-menu__img-close" src="img/close.png" alt="Закрыть"></button>
+      <button class="side-menu__button"><img class="side-menu__img-close" src="../img/close.png" alt="Закрыть"></button>
         <ul class="side-menu__list">
-            <li class="side-menu__items"><a class="side-menu__link" href="index.html">Главная</a></li>
-            <li class="side-menu__items"><a class="side-menu__link" href=".html/tariffs.html">Тарифы</a></li>
-            <li class="side-menu__items"><a class="side-menu__link" href="https://ckassa.ru/payment/?land_in=frame_short&def_pay_type=card&hide_choose_pay_type=false">Оплата</a></li>
+            <li class="side-menu__items"><a class="side-menu__link" href="../index.html">Главная</a></li>
+            <li class="side-menu__items"><a class="side-menu__link" href="tariffs.html">Тарифы</a></li>
+            <li class="side-menu__items"><a class="side-menu__link" href="#">Оплата</a></li>
             <li class="side-menu__items"><a class="side-menu__link" href="#">Тех. Поддержка</a></li>
         </ul>
     </nav>
-  
+  </div>
     <header class="mini-menu">
       <div class="mini-menu__background">
       <h4 class="mini-menu__time">Время работы: Пн-Пт 9:00-18:00</h4>
       <div class="mini-menu__contact">
-      <h4 class="mini-menu__text">Телефон:
+      <h4 class="mini-menu__text">Телефон:</h>
       <a class="mini-menu__link" href="tel:+79280987009">+7 (928) 098-70-09</a>
-      <h4 class="mini-menu__text">Почта:
+      <h4 class="mini-menu__text">Почта:</h>
       <a class="mini-menu__link" href="mailto:nur2017ooo@yandex.ru">nur2017ooo@yandex.ru</a>
-    </h4></h4></div>
+    </div>
     </div>
     </header>
 
     <header>
       <nav class="header">
-        <a class="header__link-main" href="index.html"><img class="header__logo" src="img/nur_logo.png" alt="Лого"></a>
+        <a class="header__link-main" href="../index.html"><img class="header__logo" src="../img/nur_logo.png" alt="Лого" /></a>
         <ul class="header__list">
-          <li class="header__items"><a href="index.html" class="header__link">Главная</a></li>
-          <li class="header__items"><a href=".html/tariffs.html" class="header__link">Тарифы</a></li>
-          <li class="header__items"><a href="https://ckassa.ru/payment/?land_in=frame_short&def_pay_type=card&hide_choose_pay_type=false" target="_blank" class="header__link">Оплата</a></li>
+          <li class="header__items"><a href="../index.html" class="header__link">Главная</a></li>
+          <li class="header__items"><a href="tariffs.html" class="header__link">Тарифы</a></li>
+          <li class="header__items"><a href="https://ckassa.ru/payment/?land_in=frame_short&def_pay_type=card&hide_choose_pay_type=false" target='_blank' class="header__link">Оплата</a></li>
           <li class="header__items"><a href="" class="header__link">Тех. Поддержка</a></li>
-          <button class="header__btMenu"><img class="header__menu-img" src="img/menu.png" alt="Меню"></button>
+          <button class="header__btMenu"><img class="header__menu-img" src="../img/menu.png" alt="Меню"></button>
         </ul>
       </nav>
     </header>
@@ -50,7 +63,7 @@
       <h1 class="two-header__h1">Быстрый и надежный интернет для вашего дома!</h1>
       <h3 class="two-header__h3">Откройте мир безграничных возможностей с нашим высокоскоростным интернетом. Мы предлагаем стабильное соединение, которое идеально подходит для работы, обучения и развлечений.</h3>
     </div>
-      <img class="two-header__header-img" src="img/header-img.png" alt="Фон" width="600px">
+      <img class="two-header__header-img" src="../img/header-img.png" alt="Фон" width="600px">
     </div>
   </div>
   <main>
@@ -59,7 +72,7 @@
     <div class="history">
       <ul class="history__list">
         <li class="history__items">
-          <img class="history__img" src="img/history-img-one.png" alt="Развитие сети">
+          <img class="history__img" src="../img/history-img-one.png" alt="Развитие сети">
           <h2 class="history__items-h2">Развитие сети:</h2>
           <p class="history__items-p">
 Завершена масштабная модернизация сети, обеспечившая значительное повышение скорости интернет-соединения для всех абонентов. 
@@ -67,7 +80,7 @@
           </p>
         </li>
         <li class="history__items">
-          <img class="history__img" src="img/history-img-two.png" alt="Инновации и цифровые решения">
+          <img class="history__img" src="../img/history-img-two.png" alt="Инновации и цифровые решения">
           <h2 class="history__items-h2">Инновации и цифровые решения:</h2>
           <p class="history__items-p">
 Запущены новые сервисы, такие как онлайн-оплата услуг, персональный кабинет с расширенными возможностями. 
@@ -75,13 +88,13 @@
           </p>
         </li>
         <li class="history__items">
-          <img class="history__img" src="img/history-img-three.png" alt="Социальная ответственность">
+          <img class="history__img" src="../img/history-img-three.png" alt="Социальная ответственность">
           <h2 class="history__items-h2">Социальная ответственность:</h2>
           <p class="history__items-p">НУР активно участвует в жизни города, поддерживает образовательные проекты, спортивные мероприятия и культурные инициативы.
           </p>
         </li>
         <li class="history__items">
-          <img class="history__img" src="img/history-img-four.png" alt="Доверие клиентов">
+          <img class="history__img" src="../img/history-img-four.png" alt="Доверие клиентов">
           <h2 class="history__items-h2">Доверие клиентов:</h2>
           <p class="history__items-p">НУР стабильно занимает лидирующие позиции на рынке интернет-провайдеров,  получая высокие оценки от клиентов за качество услуг, надежность и доступные цены. 
             Компания гордится высоким уровнем лояльности своих клиентов.
@@ -91,7 +104,7 @@
     </div>
 <div class="info-company">
   <div class="info-company__main">
-<img class="info-company__img" src="img/network.png" alt="Интернет" width="430px" height="450px">
+<img class="info-company__img" src="../img/network.png" alt="Интернет" width="430px" height="450px">
 <div class="info-company__text">
 <h1 class="info-company__h1">Мы поддерживаем наши отношения с <span class="red"> 2003 года</span>.</h1>
 <p class="info-company__p"> Это время, которое не просто измеряется цифрами, но наполняется ценными достижениями, опытом и благодарностью. За эти годы ООО НУР выросло из небольшого интернет-провайдера в надежного партнера, который обеспечивает высокоскоростным и стабильным интернетом тысячи семей и организаций. 
@@ -104,12 +117,12 @@
     <h1 class="events__h1-strong"><span class="border">Недавние</span><span class="blue"> события</span></h1>
     <ul class="events__list">
       <li class="events__items">
-        <img src="img/money.png" alt="Деньги" class="events__img">
+        <img src="../img/money.png" alt="Деньги" class="events__img">
         <h2 class="events__h2">Теперь оплачивать интернет стало еще проще</h2>
         <p class="events__p">Просто переходите по ссылке «Оплатить» наверху страницы. Откроется страница оплаты Ckassa. Лицевой счет — Ваш логин, который выдается при регистрации Интернет провайдером. Вы всегда можете узнать его у техподдержки.</p>
       </li>
       <li class="events__items">
-        <img src="img/sberbank.png" alt="Сбербанк" class="events__img">
+        <img src="../img/sberbank.png" alt="Сбербанк" class="events__img">
         <h2 class="events__h2">Оплата через Сбербанк</h2>
         <p class="events__p">Компания ООО «НУР» спешит сообщить что оплачивать Интернет теперь можно и через мобильное приложение «Сбербанк Онлайн» Для этого достаточно знать свой Логин для входа в сеть Интернет. Чтобы оплатить за сеть Интернет.</p>
       </li>
@@ -124,5 +137,5 @@
     <h2 class="footer__h2">г. Назрань, ул. Муталиева 52</h2>
   </div>
 </footer>
-  <script type="text/javascript" src="./js/bundle.js"></script></body>
+  </body>
 </html>
