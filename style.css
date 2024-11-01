@@ -27,8 +27,8 @@ header {
   .header__menu-img {
     display: none; }
   .header__logo {
-    width: 40px;
-    height: 50px; }
+    width: 45px;
+    height: 53px; }
   .header__img-whatsapp {
     position: absolute;
     top: 12px;
@@ -170,6 +170,9 @@ header {
     z-index: 5; } }
 
 @media (max-width: 460px) {
+  .header__link-main {
+    font-size: 45px;
+    margin-left: 10px; }
   .mini-menu {
     font-size: 10px; }
     .mini-menu__time {
