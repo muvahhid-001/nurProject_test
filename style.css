@@ -76,7 +76,7 @@ header {
   height: 25px;
   width: 100%;
   font-size: 12.5px;
-  background-color: #5c76ab; }
+  background: linear-gradient(to right, #4808eb, #1b77df); }
   .mini-menu__time {
     margin-left: 30px; }
   .mini-menu__contact {
@@ -94,7 +94,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #5c76ab;
+    background: transparent;
     font-family: Arial, Helvetica, sans-serif; }
   .mini-menu__link {
     font-family: Arial, Helvetica, sans-serif;
@@ -215,14 +215,28 @@ header {
     max-height: 450px; }
 
 .blue {
-  color: #5c76ab; }
+  background: linear-gradient(to right, #4808eb, #1b77df);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
 
 .border {
-  border-bottom: 2px solid #5c76ab; }
+  position: relative;
+  display: inline-block; }
+
+.border::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  border-radius: 10px;
+  background: linear-gradient(to right, #4808eb, #010df7);
+  z-index: -1; }
 
 .info-company {
   margin-top: 30px;
-  background-color: #5c76ab;
+  background: linear-gradient(to right, #4808eb, #434dff);
   display: flex;
   justify-content: center; }
   .info-company__main {
@@ -280,11 +294,12 @@ footer {
   display: flex;
   justify-content: center;
   margin-top: 200px;
-  background-color: #5c76ab;
+  background: linear-gradient(to right, #4808eb, #1b77df);
   width: 100%;
   height: 40px; }
 
 .footer {
+  background: transparent;
   font-family: Arial, Helvetica, sans-serif;
   font-size: clamp(8px, 2vw, 10px);
   color: #eaeaea;
