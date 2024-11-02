@@ -21,6 +21,86 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>NUR - Тарифы.</title>
     <link href="../style.css" rel="stylesheet">
+    <script>
+
+      function sendWhatsApp() {
+      const firstName = document.getElementById('firstName').value
+      const lastName = document.getElementById('lastName').value
+      const email = document.getElementById('email').value
+      const address = document.getElementById('address').value
+
+      const message = `Имя: ${firstName}%0AФамилия: ${lastName}%0AПочта: ${email}%0AАдрес: ${address}`
+      const whatsappNumber = '+79280987009'
+      const whatsappLink = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${message}`
+
+      window.open(whatsappLink, '_blank')
+      }
+
+    </script>
+    <style>
+      .whatsapp-h1{
+        margin-top: 50px;
+        text-align: center;
+      }
+      .form{
+        display: flex;
+        justify-content: center;
+      }
+      .contactForm {
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 70px;
+        padding-right: 15px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+            width: 100%;
+            max-width: 1200px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        label {
+
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        @media (max-width: 500px) {
+            .contactForm {
+                padding: 15px;
+            }
+
+            input, button {
+                font-size: 14px;
+            }
+        }
+
+    </style>
   </head>
   <body>
     <div id="overlay" class="overlay"></div>
@@ -80,11 +160,11 @@
   <h3 class="swiper__h2">Выберите подключение:</h3>
 <div class="swiper__checkbox">
   <div class="checkbox-container one">
-    <label class="swiper__checkbox-style" for="toggleCheckbox" >ВОЛС (Оптоволокно)</label>
+    <label id="changeLink1" class="swiper__checkbox-style" for="toggleCheckbox" >ВОЛС (Оптоволокно)</label>
     <input type="checkbox" id="toggleCheckbox" checked>
 </div>
 <div class="checkbox-container2 two">
-  <label class="swiper__checkbox-style" for="toggleCheckbox2">Антенна (Беспроводное)</label>
+  <label id="changeLink2" class="swiper__checkbox-style" for="toggleCheckbox2">Антенна (Беспроводное)</label>
   <input type="checkbox" id="toggleCheckbox2">
 </div>
 </div>
@@ -99,7 +179,7 @@
         <h4 class="swiper__tariff-h4-speed">Скорость до</h4>
         <h4 class="swiper__tariff-h3-speed">10 Mbit/s</h4>
       </div>
-      <a class="swiper__link" href="https://api.whatsapp.com/send?phone=79280987009&text=Здравствуйте.%0AИзмените%20мой%20тариф%20на:%20Базовый." target="_blank"><button class="swiper__buy">ВЫБРАТЬ</button></a>
+      <a id="link1" class="swiper__link" href="https://api.whatsapp.com/send?phone=79280987009&text=Здравствуйте.%0AИзмените%20мой%20тариф%20на:%20Базовый.%0AСеть:%20ВОЛС(Оптоволокно)." target="_blank"><button class="swiper__buy">ВЫБРАТЬ</button></a>
     </div>
     <div class="swiper-slide">
       <h3 class="swiper__tariff-h3">Базовый +</h3>
@@ -111,7 +191,7 @@
         <h4 class="swiper__tariff-h4-speed">Скорость до</h4>
         <h4 class="swiper__tariff-h3-speed">30 Mbit/s</h4>
       </div>
-      <a class="swiper__link" href="https://api.whatsapp.com/send?phone=79280987009&text=Здравствуйте.%0AИзмените%20мой%20тариф%20на:%20Базовый %2B." target="_blank"><button class="swiper__buy">ВЫБРАТЬ</button></a>
+      <a id="link2" class="swiper__link" href="https://api.whatsapp.com/send?phone=79280987009&text=Здравствуйте.%0AИзмените%20мой%20тариф%20на:%20Базовый %2B.%0AСеть:%20ВОЛС(Оптоволокно)." target="_blank"><button class="swiper__buy">ВЫБРАТЬ</button></a>
     </div>
     <div class="swiper-slide">
       <h3 class="swiper__tariff-h3">Вип</h3>
@@ -123,7 +203,7 @@
         <h4 class="swiper__tariff-h4-speed">Скорость до</h4>
         <h4 class="swiper__tariff-h3-speed">40 Mbit/s</h4>
       </div>
-      <a class="swiper__link" href="https://api.whatsapp.com/send?phone=79280987009&text=Здравствуйте.%0AИзмените%20мой%20тариф%20на:%20Вип." target="_blank"><button class="swiper__buy">ВЫБРАТЬ</button></a>
+      <a id="link3" class="swiper__link" href="https://api.whatsapp.com/send?phone=79280987009&text=Здравствуйте.%0AИзмените%20мой%20тариф%20на:%20Вип.%0AСеть:%20ВОЛС(Оптоволокно)." target="_blank"><button class="swiper__buy">ВЫБРАТЬ</button></a>
     </div>
     <div class="swiper-slide">
       <h3 class="swiper__tariff-h3">Премиум</h3>
@@ -135,45 +215,30 @@
         <h4 class="swiper__tariff-h4-speed">Скорость до</h4>
         <h4 class="swiper__tariff-h3-speed">100 Mbit/s</h4>
       </div>
-      <a class="swiper__link" href="https://api.whatsapp.com/send?phone=79280987009&text=Здравствуйте.%0AИзмените%20мой%20тариф%20на:%20Премиум." target="_blank"><button class="swiper__buy">ВЫБРАТЬ</button></a>
+      <a id="link4" class="swiper__link" href="https://api.whatsapp.com/send?phone=79280987009&text=Здравствуйте.%0AИзмените%20мой%20тариф%20на:%20Премиум.%0AСеть:%20ВОЛС(Оптоволокно)." target="_blank"><button class="swiper__buy">ВЫБРАТЬ</button></a>
     </div>
   </div>
   <div class="swiper-pagination"></div>
 </div>
-  <h1 class="history-h1"><span class="border">Наши</span><span class="blue"> Успехи</span></h1>
-    <div class="history">
-      <ul class="history__list">
-        <li class="history__items">
-          <img class="history__img" src="../img/history-img-one.png" alt="Развитие сети">
-          <h2 class="history__items-h2">Развитие сети:</h2>
-          <p class="history__items-p">
-Завершена масштабная модернизация сети, обеспечившая значительное повышение скорости интернет-соединения для всех абонентов. 
-Введено в эксплуатацию новое оборудование, обеспечивающее бесперебойную работу сети и высокую стабильность сигнала. 
-          </p>
-        </li>
-        <li class="history__items">
-          <img class="history__img" src="../img/history-img-two.png" alt="Инновации и цифровые решения">
-          <h2 class="history__items-h2">Инновации и цифровые решения:</h2>
-          <p class="history__items-p">
-Запущены новые сервисы, такие как онлайн-оплата услуг, персональный кабинет с расширенными возможностями. 
-Внедрены современные технологии, позволяющие оптимизировать работу сети и улучшить качество предоставляемых услуг.
-          </p>
-        </li>
-        <li class="history__items">
-          <img class="history__img" src="../img/history-img-three.png" alt="Социальная ответственность">
-          <h2 class="history__items-h2">Социальная ответственность:</h2>
-          <p class="history__items-p">НУР активно участвует в жизни города, поддерживает образовательные проекты, спортивные мероприятия и культурные инициативы.
-          </p>
-        </li>
-        <li class="history__items">
-          <img class="history__img" src="../img/history-img-four.png" alt="Доверие клиентов">
-          <h2 class="history__items-h2">Доверие клиентов:</h2>
-          <p class="history__items-p">НУР стабильно занимает лидирующие позиции на рынке интернет-провайдеров,  получая высокие оценки от клиентов за качество услуг, надежность и доступные цены. 
-            Компания гордится высоким уровнем лояльности своих клиентов.
-            </p>
-        </li>
-      </ul>
-    </div>
+  <h1 class="whatsapp-h1">Проверить подключение:</h1>
+  <div class="form">
+  <form class="contactForm" id="contactForm">
+    <label for="firstName">Имя:</label>
+    <input type="text" id="firstName" name="firstName" required>
+    
+    <label for="lastName">Фамилия:</label>
+    <input type="text" id="lastName" name="lastName" required>
+    
+    <label for="email">Почта:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="address">Адрес:</label>
+    <input type="text" id="address" name="address" required>
+    
+    <button type="button" onclick="sendWhatsApp()">Проверить</button>
+</form>
+</div>
+
 <div class="info-company">
   <div class="info-company__main">
 <img class="info-company__img" src="../img/network.png" alt="Интернет" width="430px" height="450px">
