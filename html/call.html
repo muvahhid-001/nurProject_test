@@ -1,0 +1,149 @@
+<!--
+
+Автор: zeet-comp.ru
+
+Технологии для dev:
+1) npm
+2) webpack
+3) scss
+4) bundle 
+
+-->
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="icon" type="image/svg+xml" href="../img/icon.png">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>NUR - Техническая поддержка.</title>
+    <link href="../style.css" rel="stylesheet">
+    <script>
+
+  function sendToWhatsApp(event) {
+  event.preventDefault()
+
+  const username = document.getElementById('username').value
+  const email = document.getElementById('email').value
+  const message = document.getElementById('message').value
+
+  const phoneNumber = '+79280987009'
+  const textMessage = `Имя: ${username}\nЭлектронная почта: ${email}\nСообщение: ${message}`
+  const whatsappUrl = `https://wa.me/${phoneNumber.replace(
+    /\s+/g,
+    ''
+  )}?text=${encodeURIComponent(textMessage)}`
+
+  window.open(whatsappUrl, '_blank')
+}
+
+    </script>
+  </head>
+  <body>
+    <div id="overlay" class="overlay"></div>
+    <nav id="sideMenu" class="side-menu">
+      <div class="side-menu__header">
+      <button class="side-menu__button"><img class="side-menu__img-close" src="../img/close.png" alt="Закрыть"></button>
+      </div>
+      <ul class="side-menu__list">
+            <li class="side-menu__items"><a class="side-menu__link" href="../index.html">Главная <img class="side-menu__img-link" src="../img/home.png" alt="Главная страница"></a></li>
+            <li class="side-menu__items"><a class="side-menu__link" href="tariffs.html">Тарифы <img class="side-menu__img-link" src="../img/tariffs.png" alt="Тарифы"></a></li>
+            <li class="side-menu__items"><a class="side-menu__link" href="https://ckassa.ru/payment/?land_in=frame_short&def_pay_type=card&hide_choose_pay_type=false">Оплата <img class="side-menu__img-link" src="../img/pay.png" alt="Оплата"></a></li>
+            <li class="side-menu__items"><a class="side-menu__link" href="call.html">Тех. Поддержка <img class="side-menu__img-link" src="../img/mobile.png" alt="Тех. Поддержка"></a></li>
+        </ul>
+    </nav>
+  </div>
+    <header class="mini-menu">
+      <div class="mini-menu__background">
+      <h4 class="mini-menu__time">Время работы: Пн-Пт 9:00-18:00</h4>
+      <div class="mini-menu__contact">
+      <h4 class="mini-menu__text">Телефон:</h>
+      <a class="mini-menu__link" href="tel:+79280987009">+7 (928) 098-70-09</a>
+      <h4 class="mini-menu__text">Почта:</h>
+      <a class="mini-menu__link" href="mailto:nur2017ooo@yandex.ru">nur2017ooo@yandex.ru</a>
+    </div>
+    </div>
+    </header>
+
+    <header>
+      <nav class="header">
+        <a class="header__link-main" href="../index.html"><img class="header__logo" src="../img/nur-logo.png" alt="Лого" />НУР</a>
+        <ul class="header__list">
+          <li class="header__items"><a href="../index.html" class="header__link">Главная</a></li>
+          <li class="header__items"><a href="tariffs.html" class="header__link">Тарифы</a></li>
+          <li class="header__items"><a href="https://ckassa.ru/payment/?land_in=frame_short&def_pay_type=card&hide_choose_pay_type=false" target='_blank' class="header__link">Оплата</a></li>
+          <li class="header__items border-active"><a href="call.html" class="header__link">Тех. Поддержка</a></li>
+          <button class="header__btMenu"><img class="header__menu-img" src="../img/menu.png" alt="Меню"></button>
+        </ul>
+      </nav>
+    </header>
+    <div class="two-header">
+    <div class="two-header__fon">
+      <div class="two-header__info-main">
+        <h1 class="two-header__h1">Техническая поддержка.</h1>
+        <h3 class="two-header__h3"
+          >Детально опишите ситуацию, как долго вы с этим сталкиваетесь, какие шаги вы уже предприняли для решения проблемы, мы пожем вам как можно скорее.</h3
+        >
+      </div>
+      <img class="two-header__header-img" src="../img/header-img.png" alt="Фон" width="600px">
+    </div>
+  </div>
+  <main>
+  <h1 class="call-h1">Техническая поддержка</h1>
+  <div class="call-div">
+  <form class="decor" id="contactForm" onsubmit="sendToWhatsApp(event)">
+    <div class="form-left-decoration"></div>
+    <div class="form-right-decoration"></div>
+    <div class="circle"></div>
+    <div class="form-inner">
+        <h3>Написать нам</h3>
+        <input type="text" id="username" placeholder="Имя" required>
+        <input type="email" id="email" placeholder="Электронная почта" required>
+        <textarea id="message" placeholder="Сообщение..." rows="3" required></textarea>
+        <input type="submit" value="Отправить">
+    </div>
+</form>
+</div>
+<div class="info-company">
+  <div class="info-company__main">
+<img class="info-company__img" src="../img/network.png" alt="Интернет" width="430px" height="450px">
+<div class="info-company__text">
+<h1 class="info-company__h1">Мы поддерживаем наши отношения с <span class="red"> 2003 года</span>.</h1>
+<p class="info-company__p"> Это время, которое не просто измеряется цифрами, но наполняется ценными достижениями, опытом и благодарностью. За эти годы ООО НУР выросло из небольшого интернет-провайдера в надежного партнера, который обеспечивает высокоскоростным и стабильным интернетом тысячи семей и организаций. 
+</p>
+</div>
+  </div>
+</div>
+<div class="events">
+  <div class="events__ul">
+    <h1 class="events__h1-strong"><span class="border">Недавние</span><span class="blue"> события</span></h1>
+    <ul class="events__list">
+      <li class="events__items">
+        <img src="../img/money.png" alt="Деньги" class="events__img">
+        <h2 class="events__h2">Теперь оплачивать интернет стало еще проще</h2>
+        <p class="events__p">Просто переходите по ссылке «Оплатить» наверху страницы. Откроется страница оплаты Ckassa. Лицевой счет — Ваш логин, который выдается при регистрации Интернет провайдером. Вы всегда можете узнать его у техподдержки.</p>
+      </li>
+      <li class="events__items">
+        <img src="../img/sberbank.png" alt="Сбербанк" class="events__img">
+        <h2 class="events__h2">Оплата через Сбербанк</h2>
+        <p class="events__p">Компания ООО «НУР» спешит сообщить что оплачивать Интернет теперь можно и через мобильное приложение «Сбербанк Онлайн» Для этого достаточно знать свой Логин для входа в сеть Интернет. Чтобы оплатить за сеть Интернет.</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</main>
+<footer>
+  <div class="footer">
+    <h2 class="footer__h2">ООО НУР</h2>
+    <h2 class="footer__h2">г. Назрань, ул. Муталиева 52</h2>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../js/bundle.js"></script>
+  </body>
+</html>

@@ -12,6 +12,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <link rel="icon" type="image/svg+xml" href="../img/icon.png">
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <meta
@@ -62,12 +63,7 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             box-sizing: border-box;
         }
-
-        label {
-
-        }
-
-        input {
+        input.form-input {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
@@ -75,7 +71,7 @@
             font-size: 16px;
         }
 
-        button {
+        button.whatsapp-button {
             width: 100%;
             padding: 10px;
             background-color: #28a745;
@@ -86,7 +82,7 @@
             font-size: 16px;
         }
 
-        button:hover {
+        button.whatsapp-button:hover {
             background-color: #218838;
         }
 
@@ -112,7 +108,7 @@
             <li class="side-menu__items"><a class="side-menu__link" href="../index.html">Главная <img class="side-menu__img-link" src="../img/home.png" alt="Главная страница"></a></li>
             <li class="side-menu__items"><a class="side-menu__link" href="tariffs.html">Тарифы <img class="side-menu__img-link" src="../img/tariffs.png" alt="Тарифы"></a></li>
             <li class="side-menu__items"><a class="side-menu__link" href="https://ckassa.ru/payment/?land_in=frame_short&def_pay_type=card&hide_choose_pay_type=false">Оплата <img class="side-menu__img-link" src="../img/pay.png" alt="Оплата"></a></li>
-            <li class="side-menu__items"><a class="side-menu__link" href="#">Тех. Поддержка <img class="side-menu__img-link" src="../img/mobile.png" alt="Тех. Поддержка"></a></li>
+            <li class="side-menu__items"><a class="side-menu__link" href="call.html">Тех. Поддержка <img class="side-menu__img-link" src="../img/mobile.png" alt="Тех. Поддержка"></a></li>
         </ul>
     </nav>
   </div>
@@ -135,7 +131,7 @@
           <li class="header__items"><a href="../index.html" class="header__link">Главная</a></li>
           <li class="header__items border-active"><a href="tariffs.html" class="header__link">Тарифы</a></li>
           <li class="header__items"><a href="https://ckassa.ru/payment/?land_in=frame_short&def_pay_type=card&hide_choose_pay_type=false" target='_blank' class="header__link">Оплата</a></li>
-          <li class="header__items"><a href="" class="header__link">Тех. Поддержка</a></li>
+          <li class="header__items"><a href="call.html" class="header__link">Тех. Поддержка</a></li>
           <button class="header__btMenu"><img class="header__menu-img" src="../img/menu.png" alt="Меню"></button>
         </ul>
       </nav>
@@ -224,18 +220,18 @@
   <div class="form">
   <form class="contactForm" id="contactForm">
     <label for="firstName">Имя:</label>
-    <input type="text" id="firstName" name="firstName" required>
+    <input class="form-input" type="text" id="firstName" name="firstName" required>
     
     <label for="lastName">Фамилия:</label>
-    <input type="text" id="lastName" name="lastName" required>
+    <input class="form-input" type="text" id="lastName" name="lastName" required>
     
     <label for="email">Почта:</label>
-    <input type="email" id="email" name="email" required>
+    <input class="form-input" type="email" id="email" name="email" required>
     
     <label for="address">Адрес:</label>
-    <input type="text" id="address" name="address" required>
+    <input class="form-input" type="text" id="address" name="address" required>
     
-    <button type="button" onclick="sendWhatsApp()">Проверить</button>
+    <button class="whatsapp-button" type="button" onclick="sendWhatsApp()">Проверить</button>
 </form>
 </div>
 
