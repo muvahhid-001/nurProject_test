@@ -12,6 +12,14 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <meta
+    name="description"
+    content="Быстрый и надежный интернет для вашего дома!"
+  />
+  <meta
+    name="keywords"
+    content="интернет, интернет-провайдер, нур, nur, скорость, ингушетия."
+  />
     <link rel="icon" type="image/svg+xml" href="../img/icon.png">
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -24,23 +32,23 @@
     <link href="../style.css" rel="stylesheet">
     <script>
 
-  function sendToWhatsApp(event) {
-  event.preventDefault()
+function sendToEmail(event) {
+  event.preventDefault();
 
-  const username = document.getElementById('username').value
-  const email = document.getElementById('email').value
-  const message = document.getElementById('message').value
+  const username = document.getElementById('username').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
 
-  const phoneNumber = '+79280987009'
-  const textMessage = `Имя: ${username}\nЭлектронная почта: ${email}\nСообщение: ${message}`
-  const whatsappUrl = `https://wa.me/${phoneNumber.replace(
-    /\s+/g,
-    ''
-  )}?text=${encodeURIComponent(textMessage)}`
+  const recipientEmail = 'nur_ooo@internet.ru';
+  const subject = 'Сообщение с сайта';
+  const body = `Имя: ${username}\nЭлектронная почта: ${email}\nСообщение: ${message}`;
 
-  window.open(whatsappUrl, '_blank')
+  const mailtoUrl = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  window.location.href = mailtoUrl;
 }
 
+ 
     </script>
   </head>
   <body>
@@ -51,6 +59,7 @@
       </div>
       <ul class="side-menu__list">
             <li class="side-menu__items"><a class="side-menu__link" href="../index.html">Главная <img class="side-menu__img-link" src="../img/home.png" alt="Главная страница"></a></li>
+            <li class="side-menu__items"><a class="side-menu__link" href="http://lk.nazran.ru/api.php?r=site/login" target="_blank">Личный кабинет <img class="side-menu__img-link" src="../img/lk.png" alt="Личный кабинет"></a></li>
             <li class="side-menu__items"><a class="side-menu__link" href="tariffs.html">Тарифы <img class="side-menu__img-link" src="../img/tariffs.png" alt="Тарифы"></a></li>
             <li class="side-menu__items"><a class="side-menu__link" href="https://ckassa.ru/payment/?land_in=frame_short&def_pay_type=card&hide_choose_pay_type=false">Оплата <img class="side-menu__img-link" src="../img/pay.png" alt="Оплата"></a></li>
             <li class="side-menu__items"><a class="side-menu__link" href="call.html">Тех. Поддержка <img class="side-menu__img-link" src="../img/mobile.png" alt="Тех. Поддержка"></a></li>
@@ -74,6 +83,7 @@
         <a class="header__link-main" href="../index.html"><img class="header__logo" src="../img/nur-logo.png" alt="Лого" />НУР</a>
         <ul class="header__list">
           <li class="header__items"><a href="../index.html" class="header__link">Главная</a></li>
+          <li class="header__items"><a href="http://lk.nazran.ru/api.php?r=site/login" class="header__link" target="_blank">Личный кабинет</a></li>
           <li class="header__items"><a href="tariffs.html" class="header__link">Тарифы</a></li>
           <li class="header__items"><a href="https://ckassa.ru/payment/?land_in=frame_short&def_pay_type=card&hide_choose_pay_type=false" target='_blank' class="header__link">Оплата</a></li>
           <li class="header__items border-active"><a href="call.html" class="header__link">Тех. Поддержка</a></li>
@@ -95,7 +105,7 @@
   <main>
   <h1 class="call-h1">Техническая поддержка</h1>
   <div class="call-div">
-  <form class="decor" id="contactForm" onsubmit="sendToWhatsApp(event)">
+  <form class="decor" id="contactForm" onsubmit="sendToEmail(event)">
     <div class="form-left-decoration"></div>
     <div class="form-right-decoration"></div>
     <div class="circle"></div>
@@ -107,12 +117,21 @@
         <input type="submit" value="Отправить">
     </div>
 </form>
+<div class="call-two">
+  <div class="call-two__contact">
+    <h2 class="call-two__h2"><img class="call-two__logo" src="../img/nur-logo.png" alt="Лого" />НУР</h2>
+    <h3 class="call-two__h3"><img class="call-two__gps" src="../img/gps.png" alt="Местоположение">г. Назрань, ул. Муталиева 52</h3>
+    <h3 class="call-two__h3"><img class="call-two__call" src="../img/mobile.png" alt="Звонок">+7 (928) 098-70-09</h3>
+  </div>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2907.517779472709!2d44.7593951770129!3d43.219602671125905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40506ef2c4aa23ab%3A0x998df35d660e42f!2z0J7QkdGJ0LXRgdGC0LLQviDQvtCz0YDQsNC90LjRh9C10L3QvdC-0Lkg0L7RgtCy0LXRgtGB0YLQstC10L3QvdC-0YHRgtC4ICLQndCj0KAi!5e0!3m2!1sru!2sru!4v1730805844864!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
+</div>
+
 <div class="info-company">
   <div class="info-company__main">
 <img class="info-company__img" src="../img/network.png" alt="Интернет" width="430px" height="450px">
 <div class="info-company__text">
-<h1 class="info-company__h1">Мы поддерживаем наши отношения с <span class="red"> 2003 года</span>.</h1>
+<h1 class="info-company__h1">Мы развиваем связь с<span class="red"> 2003 года</span>.</h1>
 <p class="info-company__p"> Это время, которое не просто измеряется цифрами, но наполняется ценными достижениями, опытом и благодарностью. За эти годы ООО НУР выросло из небольшого интернет-провайдера в надежного партнера, который обеспечивает высокоскоростным и стабильным интернетом тысячи семей и организаций. 
 </p>
 </div>
